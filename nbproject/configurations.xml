@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>inc/ModelData.h</itemPath>
+      <itemPath>inc/ServerApp.h</itemPath>
+      <itemPath>inc/ServiceHandler.h</itemPath>
+      <itemPath>inc/ServiceModel.h</itemPath>
+      <itemPath>inc/storagedef.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/ServerApp.cpp</itemPath>
+      <itemPath>src/ServiceModel.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="thrift" projectFiles="true">
+      <logicalFolder name="gen-cpp" displayName="gen-cpp" projectFiles="true">
+        <itemPath>thrift/gen-cpp/TDataService.cpp</itemPath>
+        <itemPath>thrift/gen-cpp/TDataService.h</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.h</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.h</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp</itemPath>
+        <itemPath>thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.h</itemPath>
+      </logicalFolder>
+      <itemPath>thrift/{{THRIFT_FILE_NAME}}.thrift</itemPath>
+      <itemPath>thrift/thriftgen.sh</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>{{SERVICE_BIN}}.properties</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>inc</pElem>
+            <pElem>../../contribs/LibEvent/include</pElem>
+            <pElem>../../contribs/Boost/include</pElem>
+            <pElem>../../contribs/Poco/include</pElem>
+            <pElem>../../contribs/ApacheThrift/include</pElem>
+            <pElem>../../contribs/SpecialContribs/include</pElem>
+            <pElem>thrift/gen-cpp</pElem>
+            <pElem>../../contribs/SpecialContribs/src/hashkit</pElem>
+            <pElem>../../contribs/SpecialContribs/src/libstatgrab</pElem>
+            <pElem>../../contribs/SpecialContribs/include/kyotocabinet</pElem>
+            <pElem>../../contribs/SpecialContribs/include/leveldb</pElem>
+            <pElem>../../contribs/SpecialContribs/src/</pElem>
+            <pElem>../../corelibs/BaseFoundation/include</pElem>
+            <pElem>../../corelibs/OpenStorage/inc</pElem>
+            <pElem>../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>Client</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>bin/{{SERVICE_BIN}}d</output>
+          <linkerLibItems>
+            <linkerLibFileItem>../../corelibs/OpenStorage/lib/libopenstoraged.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/BaseFoundation/lib/libbasefoundationd.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/ApacheThrift/lib/libapachethriftd.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libspecialcontribsd.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/Poco/lib/libpocoalld.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/LibEvent/lib/libeventd.a</linkerLibFileItem>
+            <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
+            <linkerOptionItem>-lpthread -lrt</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="inc/ModelData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServerApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/storagedef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="platformprofileservice.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ServerApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ServiceModel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/{{THRIFT_FILE_NAME}}.thrift" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/thriftgen.sh" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>inc</pElem>
+            <pElem>../../contribs/LibEvent/include</pElem>
+            <pElem>../../contribs/Boost/include</pElem>
+            <pElem>../../contribs/Poco/include</pElem>
+            <pElem>../../contribs/ApacheThrift/include</pElem>
+            <pElem>../../contribs/SpecialContribs/include</pElem>
+            <pElem>thrift/gen-cpp</pElem>
+            <pElem>../../contribs/SpecialContribs/src/hashkit</pElem>
+            <pElem>../../contribs/SpecialContribs/src/libstatgrab</pElem>
+            <pElem>../../contribs/SpecialContribs/include/kyotocabinet</pElem>
+            <pElem>../../contribs/SpecialContribs/include/leveldb</pElem>
+            <pElem>../../contribs/SpecialContribs/src/</pElem>
+            <pElem>../../corelibs/BaseFoundation/include</pElem>
+            <pElem>../../corelibs/OpenStorage/inc</pElem>
+            <pElem>../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>Client</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>bin/{{SERVICE_BIN}}</output>
+          <linkerLibItems>
+            <linkerLibFileItem>../../corelibs/OpenStorage/lib/libopenstorage.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/BaseFoundation/lib/libbasefoundation.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/ApacheThrift/lib/libapachethrift.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libspecialcontribs.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/Poco/lib/libpocoall.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/LibEvent/lib/libevent.a</linkerLibFileItem>
+            <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
+            <linkerOptionItem>-lpthread -lrt</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="inc/ModelData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServerApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/storagedef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="{{SERVICE_BIN}}.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ServerApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ServiceModel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/{{THRIFT_FILE_NAME}}.thrift" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/thriftgen.sh" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_Full" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>inc</pElem>
+            <pElem>../../contribs/LibEvent/include</pElem>
+            <pElem>../../contribs/Boost/include</pElem>
+            <pElem>../../contribs/Poco/include</pElem>
+            <pElem>../../contribs/ApacheThrift/include</pElem>
+            <pElem>../../contribs/SpecialContribs/include</pElem>
+            <pElem>thrift/gen-cpp</pElem>
+            <pElem>../../contribs/SpecialContribs/src/hashkit</pElem>
+            <pElem>../../contribs/SpecialContribs/src/libstatgrab</pElem>
+            <pElem>../../contribs/SpecialContribs/include/kyotocabinet</pElem>
+            <pElem>../../contribs/SpecialContribs/include/leveldb</pElem>
+            <pElem>../../contribs/SpecialContribs/src/</pElem>
+            <pElem>../../corelibs/BaseFoundation/include</pElem>
+            <pElem>../../corelibs/OpenStorage/inc</pElem>
+            <pElem>../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>Client</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>bin/{{SERVICE_BIN}}</output>
+          <linkerLibItems>
+            <linkerLibFileItem>../../corelibs/CuteStorage/lib/libcutestorage.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/OpenStorage/lib/libopenstorage.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/BaseFoundation/lib/libbasefoundation.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/ApacheThrift/lib/libapachethrift.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libspecialcontribs.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/Poco/lib/libpocoall.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/LibEvent/lib/libevent.a</linkerLibFileItem>
+            <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
+            <linkerOptionItem>-lpthread -lrt</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="inc/ModelData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServerApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/ServiceModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inc/storagedef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="{{SERVICE_BIN}}.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ServerApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ServiceModel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/TDataService.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="thrift/{{THRIFT_FILE_NAME}}.thrift" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thrift/thriftgen.sh" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

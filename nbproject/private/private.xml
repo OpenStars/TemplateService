@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="ZShareCloud">
+            <file>file:/home/tuan/workspace/repos/base_platform_pub/services/ZShareCloud_New/I64ToI64SetService/inc/ServiceHandler.h</file>
+            <file>file:/home/tuan/workspace/repos/base_platform_pub/services/ZShareCloud_New/I64ToI64SetService/i64toi64setservice.properties</file>
+        </group>
+        <group name="Trades"/>
+        <group name="hcore2017">
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/inc/ServiceHandler.h</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/inc/ServerApp.h</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/genService.go</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/src/ServiceModel.cpp</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/thrift/thriftgen.sh</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/thrift/template.thrift</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/nbproject/Makefile-Release.mk</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/nbproject/configurations.xml</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/inc/ServiceModel.h</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/inc/ModelData.h</file>
+            <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/nbproject/Makefile-Release_Full.mk</file>
+        </group>
+    </open-files>
+</project-private>
