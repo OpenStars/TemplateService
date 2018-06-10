@@ -7,6 +7,8 @@ import (
     "io/ioutil"
 	// "os"
 	"fmt"
+	"flag"
+	"path/filepath"
 )
 
 type CODE_VARS struct {
@@ -31,12 +33,12 @@ var (
 	THRIFT_SERVICE_NAME_KEY="{{THRIFT_SERVICE_NAME}}"
 	THRIFT_SERVICE_NAME="TPlatformProfileService"
 	
-	
+	DATAITEM_THRIFT_KEY="{{DATAITEM_TYPE_THRIFT}}"
+	DATAITEM_THRIFT="TPlatformProfile"
+		
 	THRIFT_SERVICE_FULLNS_KEY="{{THRIFT_SERVICE_FULLNSNAME}}"
 	THRIFT_SERVICE_FULLNS=THRIFTCPP_NS+"::"+THRIFT_SERVICE_NAME
 	
-	DATAITEM_THRIFT_KEY="{{DATAITEM_TYPE_THRIFT}}"
-	DATAITEM_THRIFT="TPlatformProfile"
 	
 	DATAINMODEL_THRIFT_KEY="{{MODELDATA_TYPE_THRIFT}}"
 	DATAINMODEL_THRIFT=THRIFTCPP_NS+"::"+DATAITEM_THRIFT
@@ -45,11 +47,46 @@ var (
 )
 func main(){
 	var outDir string;
-	if len(os.Args) > 1 {
-		outDir = os.Args[1]+"/"+SERVICE_NAME
-	} else {
-		outDir = "../gen/"+SERVICE_NAME
-	}
+	flag.StringVar(&outDir, "outdir", "../generated-services/", "output directory")
+	
+	// if len(os.Args) > 1 {
+
+	// 	outDir = os.Args[1]+"/"+SERVICE_NAME
+	// } else {
+	// 	outDir = "../gen/"+SERVICE_NAME
+	// }
+
+	// SERVICE_NAME_KEY="{{SERVICE_NAME}}"
+	// SERVICE_NAME="PlatformProfileService2"
+	
+	// SERVICE_BIN="platformprofileservice"
+	
+	// THRIFT_FILE="openstarsprofile"
+	
+	// THRIFTCPP_NS="OpenStars::Platform::Profile"
+	
+	// THRIFTCPPDOT_NS="OpenStars.Platform.Profile"
+	
+	// THRIFT_SERVICE_NAME="TPlatformProfileService"
+	
+	// DATAITEM_THRIFT="TPlatformProfile"
+	flag.StringVar(&SERVICE_BIN, "SERVICE_BIN", "platformprofileservice", "Binary output name")
+	flag.StringVar(&THRIFT_FILE, "THRIFT_FILE", "serviceinterface", "thrift file name name")
+	flag.StringVar(&THRIFTCPP_NS, "THRIFTCPP_NS", "OpenStars::Platform::Profile", "cpp namespace of thrift generated")
+	flag.StringVar(&THRIFTCPPDOT_NS, "THRIFTCPPDOT_NS", "OpenStars.Platform.Profile", "namespace in thrift file")
+	flag.StringVar(&THRIFT_SERVICE_NAME, "THRIFT_SERVICE_NAME", "TPlatformProfileService", "Main Thrift serivce name")
+	flag.StringVar(&DATAITEM_THRIFT, "DATAITEM_THRIFT", "TPlatformProfile", "Data item type name")
+	flag.StringVar(&SERVICE_NAME, "SERVICE_NAME", "PlatformProfileService2", "Project Name")
+
+	flag.Parse()
+
+	//re-evaluate 
+	THRIFT_SERVICE_FULLNS=THRIFTCPP_NS+"::"+THRIFT_SERVICE_NAME		
+	DATAINMODEL_THRIFT=THRIFTCPP_NS+"::"+DATAITEM_THRIFT
+
+
+
+	outDir = filepath.Join(outDir, SERVICE_NAME)
 	fmt.Println("outDir:", outDir)
 	os.MkdirAll(outDir, 0777)
 	os.MkdirAll(outDir + "/inc", 0777)
