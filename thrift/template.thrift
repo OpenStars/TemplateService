@@ -26,7 +26,7 @@ typedef {{DATAITEM_TYPE_THRIFT}} TData
 
 struct TDataResult{
     1: TErrorCode errorCode,
-    2: optional TData data
+    2: optional {{DATAITEM_TYPE_THRIFT}} data
     
 }
 
@@ -36,7 +36,7 @@ service TDataServiceR{
 
 service TDataService{
     TDataResult getData(1: TKey key), 
-    TErrorCode putData(1: TData data)
+    TErrorCode putData(1: TKey key, 2: {{DATAITEM_TYPE_THRIFT}} data)
 }
 
 service {{THRIFT_SERVICE_NAME}} extends TDataService{

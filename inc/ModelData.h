@@ -19,8 +19,7 @@ namespace model {
         
         {{MODELDATA_TYPE_THRIFT}} data;
         
-        ModelData(void) {
-            
+        ModelData(void) {            
         }
 
         void assignTo({{MODELDATA_TYPE_THRIFT}}& value) const {

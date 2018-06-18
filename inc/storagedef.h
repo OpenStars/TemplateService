@@ -17,7 +17,7 @@
 
 
 typedef {{THRIFT_NS}}::TKey KEYTYPE;
-typedef {{THRIFT_NS}}::TData VALUETYPE;
+typedef {{THRIFT_NS}}::{{DATAITEM_TYPE_THRIFT}} VALUETYPE;
 
 typedef TSerializer<VALUETYPE> DataSerializer;
 typedef openstars::storage::ObjectStorage< KEYTYPE

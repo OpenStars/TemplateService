@@ -15,8 +15,7 @@ ServiceModel::ServiceModel(Poco::SharedPtr<PersistentStorageType> aStorage) : m_
 ServiceModel::~ServiceModel(void) {
 }
 
-void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return, 
-        const {{THRIFT_NS}}::TKey key)
+void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return, const {{THRIFT_NS}}::TKey key)
 {
     class get_value_visitor : public PersistentStorageType::data_visitor {
     public:
@@ -39,8 +38,7 @@ void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return,
     }    
 }
 
-{{THRIFT_NS}}::TErrorCode::type ServiceModel::putData(
-                                const {{THRIFT_NS}}::TData& data)
+{{THRIFT_NS}}::TErrorCode::type ServiceModel::putData({{THRIFT_NS}}::TKey key, const {{THRIFT_NS}}::{{DATAITEM_TYPE_THRIFT}}& data)
 {
     class putdata_visitor : public PersistentStorageType::data_visitor {
     public:
@@ -59,6 +57,6 @@ void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return,
 
     if (this->m_storage) {
         putdata_visitor visitor(data);
-        this->m_storage->visit(data.uid, &visitor);
+        this->m_storage->visit(key, &visitor);
     }    
 }

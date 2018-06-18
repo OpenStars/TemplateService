@@ -18,10 +18,10 @@ public:
     virtual ~ServiceModel(void);
 
 public:
-  void getData( {{THRIFT_NS}}::TDataResult& _return, 
-                const {{THRIFT_NS}} ::TKey key);
-  {{THRIFT_NS}}::TErrorCode::type putData(
-                                    const {{THRIFT_NS}} ::TData& data);
+  void getData( {{THRIFT_NS}}::TDataResult& _return, const {{THRIFT_NS}} ::TKey key);
+
+  {{THRIFT_NS}}::TErrorCode::type putData( {{THRIFT_NS}}::TKey key, 
+                const {{THRIFT_NS}}::{{DATAITEM_TYPE_THRIFT}}& data);
    
 private:
     ServiceModel(const ServiceModel& orig);

@@ -30,11 +30,11 @@ public:
         if (this->m_pmodel)
             m_pmodel->getData(_return, key);
     }
-    {{THRIFT_NS}}::TErrorCode::type putData(
+    {{THRIFT_NS}}::TErrorCode::type putData( {{THRIFT_NS}}::TKey key,
                                 const {{THRIFT_NS}}::TData& data)
     {
         if (this->m_pmodel)
-            return m_pmodel->putData(data);
+            return m_pmodel->putData(key, data);
         return {{THRIFT_NS}}::TErrorCode::EUnknown;
     }
 
