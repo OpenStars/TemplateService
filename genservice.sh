@@ -14,6 +14,9 @@
 ./genService -SERVICE_BIN=gkvservice -THRIFT_FILE=gkv -THRIFTCPP_NS="OpenStars::KV" -THRIFTCPPDOT_NS="OpenStars.KV" \
         -THRIFT_SERVICE_NAME="TSimpleKVService" -DATAITEM_THRIFT="TValueType" -SERVICE_NAME=GKVService
 
+./genService -SERVICE_BIN=s2i64kv -THRIFT_FILE=s2i64kv -THRIFTCPP_NS="OpenStars::Common::S2I64KV" -THRIFTCPPDOT_NS="OpenStars.Common.S2I64KV" \
+        -THRIFT_SERVICE_NAME="TString2I64KVService" -DATAITEM_THRIFT="TI64Value" -SERVICE_NAME=S2I64KVService
+
 # SERVICE_NAME_KEY="{{SERVICE_NAME}}"
 # SERVICE_NAME=PlatformProfileService2
 
