@@ -43,6 +43,11 @@ var (
 	DATAINMODEL_THRIFT_KEY="{{MODELDATA_TYPE_THRIFT}}"
 	DATAINMODEL_THRIFT=THRIFTCPP_NS+"::"+DATAITEM_THRIFT
 
+	GO_PACKAGE_KEY="{{GO_PACKAGE}}"
+	GO_PACKAGE=""
+
+	GOGEN_PATH_KEY="{{GOGEN_PATH}}"
+	GOGEN_PATH="/gen-go"
 	TempMap map[string]string = make(map[string]string)
 )
 func main(){
@@ -84,7 +89,26 @@ func main(){
 	THRIFT_SERVICE_FULLNS=THRIFTCPP_NS+"::"+THRIFT_SERVICE_NAME		
 	DATAINMODEL_THRIFT=THRIFTCPP_NS+"::"+DATAITEM_THRIFT
 
+//
+//	Parse something from THRIFTCPPDOT_NS
 
+	Packages := strings.Split(THRIFTCPPDOT_NS,".")
+	if len(Packages) > 0 {
+		GO_PACKAGE = Packages[len(Packages)-1]
+
+		GOGEN_PATH = "/gen-go";
+
+		for _, aPkg := range Packages{
+			GOGEN_PATH = GOGEN_PATH+"/"+ aPkg
+		}
+	}
+	// GO_PACKAGE_KEY="{{GO_PACKAGE}}"
+	// GO_PACKAGE=""
+
+	// GOGEN_PATH_KEY="{{GOGEN_PATH}}"
+	// GOGEN_PATH="/gen-go/OpenStars/"
+
+//
 
 	outDir = filepath.Join(outDir, SERVICE_NAME)
 	fmt.Println("outDir:", outDir)
@@ -115,7 +139,11 @@ func main(){
 	processFile( "nbproject/project.xml" , outDir + "/nbproject/project.xml" )
 	processFile( "Makefile" , outDir + "/Makefile" )
 	processFile( "template_service.properties" , outDir + "/"+SERVICE_BIN + ".properties" )
-		
+
+	os.MkdirAll(outDir + "/go-clients/transports", 0777)
+	os.MkdirAll(outDir + "/go-clients/test", 0777)
+	processFile("go-client/template-transport.go" , outDir + "/go-clients/transports/transport.go")
+	processFile("go-client/template-testclient.go" , outDir + "/go-clients/test/main.go")
 }
 
 func processFile(filename string, outFileName string){
@@ -133,6 +161,9 @@ func processFile(filename string, outFileName string){
 	s = strings.Replace( s, DATAITEM_THRIFT_KEY, DATAITEM_THRIFT, -1)
 	s = strings.Replace( s, DATAINMODEL_THRIFT_KEY, DATAINMODEL_THRIFT, -1)
 
+	s = strings.Replace( s, GOGEN_PATH_KEY, GOGEN_PATH, -1)
+	s = strings.Replace( s, GO_PACKAGE_KEY, GO_PACKAGE, -1)
+	
 	ioutil.WriteFile(outFileName,  []byte(s) , 0644 );
 	//fmt.Println(s);
 }

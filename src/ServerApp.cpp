@@ -34,6 +34,18 @@ void ServerApp::initialize(Poco::Util::Application& app) {
             , apache::thrift::stdcxx::shared_ptr< ServiceHandler > (new ServiceHandler(ServiceFactory::getModel())));
     this->addSubsystem(aBizServer);
 
+    int aBinaryPort = app.config().getInt("sns.thrift.binary.port" , 0);
+    if (aBinaryPort > 0) {
+        cout<<"Binary protocol listened on port "<< aBinaryPort;
+        ServiceHandler::TBinaryServiceThriftServer* aBizServer = new ServiceHandler::TBinaryServiceThriftServer(
+                aBinaryPort
+                , ServiceFactory::_workerCount
+                , apache::thrift::stdcxx::shared_ptr< ServiceHandler > (new ServiceHandler(ServiceFactory::getModel())));
+        this->addSubsystem(aBizServer);
+        
+    }
+
+
     this->addSubsystem(new TStorageStatModule);
 
     //Stat handler

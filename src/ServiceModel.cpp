@@ -25,6 +25,7 @@ void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return, const {{THRIFT_N
 
         virtual bool visit(const PersistentStorageType::TKey& key, PersistentStorageType::TValue& value) {
             value.assignTo(this->output.data);
+            output.__isset.data = true;
             return false;
         }
 
