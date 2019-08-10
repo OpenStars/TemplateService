@@ -132,6 +132,8 @@ func main(){
 	processFile( "thrift/thriftgen.sh" , outDir + "/thrift/thriftgen.sh" )
 
 	processFile( "nbproject/configurations.xml" , outDir + "/nbproject/configurations.xml" )
+	processFile( "nbproject/Makefile-variables.mk" , outDir + "/nbproject/Makefile-variables.mk" )
+	processFile( "nbproject/Makefile-impl.mk" , outDir + "/nbproject/Makefile-impl.mk" )
 	processFile( "nbproject/Makefile-Debug.mk" , outDir + "/nbproject/Makefile-Debug.mk" )
 	processFile( "nbproject/Makefile-Release.mk" , outDir + "/nbproject/Makefile-Release.mk" )
 	processFile( "nbproject/Makefile-Release_Full.mk" , outDir + "/nbproject/Makefile-Release_Full.mk" )
