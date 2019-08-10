@@ -58,23 +58,23 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=../../corelibs/OpenStorage/lib/libopenstorage.a ../../corelibs/BaseFoundation/lib/libbasefoundation.a ../../contribs/ApacheThrift/lib/libapachethrift.a ../../contribs/SpecialContribs/lib/libspecialcontribs.a ../../contribs/Poco/lib/libpocoall.a ../../contribs/LibEvent/lib/libevent.a -ldl -lpthread -lrt
+LDLIBSOPTIONS=../../corelibs/OpenStorage/lib/libopenstorage.a ../../../corelibs/BaseFoundation/lib/libbasefoundation.a ../../../contribs/ApacheThrift/lib/libapachethrift.a ../../../contribs/SpecialContribs/lib/libspecialcontribs.a ../../../contribs/Poco/lib/libpocoall.a ../../../contribs/LibEvent/lib/libevent.a  ../../../contribs/SpecialContribs/lib/libetcd-cpp-api.a ../../../contribs/SpecialContribs/lib/libares.a ../../../contribs/SpecialContribs/lib/libboost_atomic.a ../../../contribs/SpecialContribs/lib/libboost_chrono.a ../../../contribs/SpecialContribs/lib/libboost_date_time.a ../../../contribs/SpecialContribs/lib/libboost_locale.a ../../../contribs/SpecialContribs/lib/libboost_regex.a ../../../contribs/SpecialContribs/lib/libboost_system.a ../../../contribs/SpecialContribs/lib/libboost_thread.a ../../../contribs/SpecialContribs/lib/libcpprest.a ../../../contribs/SpecialContribs/lib/libgpr.a ../../../contribs/SpecialContribs/lib/libgrpc++.a ../../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a ../../../contribs/SpecialContribs/lib/libgrpc++_cronet.a ../../../contribs/SpecialContribs/lib/libgrpc++_error_details.a ../../../contribs/SpecialContribs/lib/libgrpc++_reflection.a ../../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a ../../../contribs/SpecialContribs/lib/libgrpc.a ../../../contribs/SpecialContribs/lib/libgrpc_unsecure.a ../../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a ../../../contribs/SpecialContribs/lib/libprotobuf.a `pkg-config --libs zlib` `pkg-config --libs openssl` -ldl  -lpthread -lrt  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk bin/{{SERVICE_BIN}}
 
-bin/{{SERVICE_BIN}}: ../../corelibs/OpenStorage/lib/libopenstorage.a
+bin/{{SERVICE_BIN}}: ../../../corelibs/OpenStorage/lib/libopenstorage.a
 
-bin/{{SERVICE_BIN}}: ../../corelibs/BaseFoundation/lib/libbasefoundation.a
+bin/{{SERVICE_BIN}}: ../../../corelibs/BaseFoundation/lib/libbasefoundation.a
 
-bin/{{SERVICE_BIN}}: ../../contribs/ApacheThrift/lib/libapachethrift.a
+bin/{{SERVICE_BIN}}: ../../../contribs/ApacheThrift/lib/libapachethrift.a
 
-bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libspecialcontribs.a
+bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libspecialcontribs.a
 
-bin/{{SERVICE_BIN}}: ../../contribs/Poco/lib/libpocoall.a
+bin/{{SERVICE_BIN}}: ../../../contribs/Poco/lib/libpocoall.a
 
-bin/{{SERVICE_BIN}}: ../../contribs/LibEvent/lib/libevent.a
+bin/{{SERVICE_BIN}}: ../../../contribs/LibEvent/lib/libevent.a
 
 bin/{{SERVICE_BIN}}: ${OBJECTFILES}
 	${MKDIR} -p bin
