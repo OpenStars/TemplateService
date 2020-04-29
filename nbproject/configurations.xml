@@ -55,22 +55,24 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>inc</pElem>
-            <pElem>../../../contribs/LibEvent/include</pElem>
-            <pElem>../../../contribs/Boost/include</pElem>
-            <pElem>../../../contribs/Poco/include</pElem>
-            <pElem>../../../contribs/ApacheThrift/include</pElem>
-            <pElem>../../../contribs/SpecialContribs/include</pElem>
+          <pElem>inc</pElem>
+            <pElem>../../contribs/LibEvent/include</pElem>
+            <pElem>../../contribs/Boost/include</pElem>
+            <pElem>../../contribs/Poco/include</pElem>
+            <pElem>../../contribs/ApacheThrift/include</pElem>
+            <pElem>../../contribs/SpecialContribs/include</pElem>
             <pElem>thrift/gen-cpp</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/hashkit</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/libstatgrab</pElem>
-            <pElem>../../../contribs/SpecialContribs/include/kyotocabinet</pElem>
-            <pElem>../../../contribs/SpecialContribs/include/leveldb</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/</pElem>
-            <pElem>../../../corelibs/BaseFoundation/include</pElem>
-            <pElem>../../../corelibs/OpenStorage/inc</pElem>
-            <pElem>../../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>../../contribs/SpecialContribs/src/hashkit</pElem>
+            <pElem>../../contribs/SpecialContribs/src/libstatgrab</pElem>
+            <pElem>../../contribs/SpecialContribs/include/kyotocabinet</pElem>
+            <pElem>../../contribs/SpecialContribs/include/leveldb</pElem>
+            <pElem>../../contribs/SpecialContribs/src</pElem>
+            <pElem>../../corelibs/BaseFoundation/include</pElem>
+            <pElem>../../corelibs/OpenStorage/inc</pElem>
+            <pElem>../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
             <pElem>Client</pElem>
+            <pElem>/usr/include/boost</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/openssl</pElem>
           </incDir>
           <preprocessorList>
             <Elem>HAVE_CONFIG_H</Elem>
@@ -79,37 +81,37 @@
         <linkerTool>
           <output>bin/{{SERVICE_BIN}}d</output>
           <linkerLibItems>
-            <linkerLibFileItem>../../../corelibs/OpenStorage/lib/libopenstoraged.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../corelibs/BaseFoundation/lib/libbasefoundationd.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/ApacheThrift/lib/libapachethriftd.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libspecialcontribsd.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/Poco/lib/libpocoalld.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/LibEvent/lib/libeventd.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libetcd-cpp-api.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libares.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_atomic.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_chrono.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_date_time.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_locale.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_regex.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_system.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libboost_thread.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libcpprest.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgpr.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++_cronet.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++_error_details.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++_reflection.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpc_unsecure.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a</linkerLibFileItem>
-            <linkerLibFileItem>../../../contribs/SpecialContribs/lib/libprotobuf.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/OpenStorage/lib/libopenstorage.a</linkerLibFileItem>
+            <linkerLibFileItem>../../corelibs/BaseFoundation/lib/libbasefoundation.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/ApacheThrift/lib/libapachethrift.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libspecialcontribs.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/Poco/lib/libpocoall.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/LibEvent/lib/libevent.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libetcd-cpp-api.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libares.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_atomic.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_chrono.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_date_time.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_locale.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_regex.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_system.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libboost_thread.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libcpprest.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgpr.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++_cronet.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++_error_details.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++_reflection.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpc_unsecure.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a</linkerLibFileItem>
+            <linkerLibFileItem>../../contribs/SpecialContribs/lib/libprotobuf.a</linkerLibFileItem>
             <linkerOptionItem>`pkg-config --libs zlib`</linkerOptionItem>
             <linkerOptionItem>`pkg-config --libs openssl`</linkerOptionItem>
             <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
-            <linkerOptionItem>-lpthread -lrt</linkerOptionItem>   
+            <linkerOptionItem>-lpthread -lrt</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

@@ -15,7 +15,7 @@
 
 typedef ServiceFactoryT< CacheType, CacheFactory, BackendStorageType, PersistentStorageType, ServiceModel> ServiceFactory;
 
-ServerApp::ServerApp(void) : _showHelp(false), _zkReg("") {
+ServerApp::ServerApp(void) : _showHelp(false), _zkReg(""),_etcdReg("") {
 }
 
 ServerApp::~ServerApp(void) {
@@ -83,7 +83,31 @@ int ServerApp::main(const std::vector<std::string>& args) {
         _zkReg.start();
     } catch (...) {
     }
+  try {
+		
+        if (args.size() > 1 && (args[1] == "noetcd" || args[1] == "testkv"))
+            throw 1;
+        if (args.size() > 2 && (args[2] == "noetcd" || args[1] == "testkv"))
+            throw 1;
 
+        if(ServiceFactory::_enableEtcdServer)
+        {
+
+           std::cout<<"use etcd server : "<<ServiceFactory::_etcdServer<<std::endl;
+
+
+           this->_etcdReg.setEtcdHosts(ServiceFactory::_etcdServer);
+
+
+
+           this->_etcdReg.addService(ServiceFactory::_etcdPath,ServiceFactory::_svrHost,ServiceFactory::_svrPort,ServiceFactory::_zkScheme);
+
+           this->_etcdReg.addService("/server-monitor/"+ServiceFactory::_etcdPath,ServiceFactory::_svrHost,ServiceFactory::_cfgPort,"thirft_binary");
+           this->_etcdReg.start();
+        }
+	    } catch(...){
+		std::cout<<"Cannot use EtcdServer"<<std::endl;
+    }
     if (!_showHelp)
         waitForTerminationRequest();
 

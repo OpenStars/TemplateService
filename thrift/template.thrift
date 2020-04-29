@@ -12,7 +12,7 @@ enum TErrorCode{
 }
 
 struct {{DATAITEM_TYPE_THRIFT}}{
-    1: TKey uid
+    1: i64 uid
     2: string username,
     3: string displayName
     4: map<string, bool> trustedEmails,
@@ -30,13 +30,20 @@ struct TDataResult{
     
 }
 
+struct TListDataResult{
+    1: TErrorCode errorCode,
+    2: optional list<{{DATAITEM_TYPE_THRIFT}}> data
+}
+
 service TDataServiceR{
-    TDataResult getData(1: TKey key), 
+    TDataResult getData(1:i64 key), 
 }
 
 service TDataService{
-    TDataResult getData(1: TKey key), 
-    TErrorCode putData(1: TKey key, 2: {{DATAITEM_TYPE_THRIFT}} data)
+    TDataResult getData(1:i64 key), 
+    TErrorCode putData(1:i64 key, 2: {{DATAITEM_TYPE_THRIFT}} data)
+    TListDataResult getListData(1:list<i64> lskeys)
+    TErrorCode removeData(1:i64 key) 
 }
 
 service {{THRIFT_SERVICE_NAME}} extends TDataService{

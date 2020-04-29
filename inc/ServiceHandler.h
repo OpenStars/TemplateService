@@ -37,7 +37,28 @@ public:
             return m_pmodel->putData(key, data);
         return {{THRIFT_NS}}::TErrorCode::EUnknown;
     }
-
+    {{THRIFT_NS}}::TErrorCode::type removeData(int64_t key){
+         if(this->m_pmodel) 
+            return m_pmodel->removeData(key);
+        return  {{THRIFT_NS}}::TErrorCode::EUnknown;
+    }
+    
+    void getListData({{THRIFT_NS}}::TListDataResult& _return, const std::vector<int64_t> lskeys){
+         std::vector<OpenStars::Common::TPostStorageService::TPostItem> listdatas;
+         if (this->m_pmodel) {
+             for(int i = 0 ; i < listkey.size();i++){
+                 OpenStars::Common::TPostStorageService::TDataResult tempresult;
+                 getData(tempresult,listkey[i]);
+                 if (tempresult.errorCode == OpenStars::Common::TPostStorageService::TErrorCode::EGood){
+                      listdatas.push_back(tempresult.data);  
+                 }
+             }
+            _return.__set_errorCode(OpenStars::Common::TPostStorageService::TErrorCode::EGood);
+            _return.__set_listDatas(listdatas);
+            return;
+         }
+         _return.__set_errorCode(OpenStars::Common::TPostStorageService::TErrorCode::EUnknown);
+    }
 };
 
 #endif /* SERVICEHANDLER_H */

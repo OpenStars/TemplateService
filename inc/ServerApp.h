@@ -14,6 +14,7 @@
 #include "Poco/Util/HelpFormatter.h"
 #include "Poco/NumberParser.h"
 #include "ZKRegister.h"
+#include "EtcdRegister.h"
 
 class ServerApp : public Poco::Util::ServerApplication {
 public:
@@ -44,6 +45,7 @@ public:
 private:
     bool _showHelp;
     ZKRegister _zkReg;
+     EtcdRegister _etcdReg;
 
 };
 

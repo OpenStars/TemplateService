@@ -22,6 +22,7 @@ public:
 
   {{THRIFT_NS}}::TErrorCode::type putData( {{THRIFT_NS}}::TKey key, 
                 const {{THRIFT_NS}}::{{DATAITEM_TYPE_THRIFT}}& data);
+   {{THRIFT_NS}}::TErrorCode::type         removeData(int64_t key);
    
 private:
     ServiceModel(const ServiceModel& orig);

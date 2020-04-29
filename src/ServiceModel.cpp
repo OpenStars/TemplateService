@@ -61,3 +61,13 @@ void ServiceModel::getData({{THRIFT_NS}}::TDataResult& _return, const {{THRIFT_N
         this->m_storage->visit(key, &visitor);
     }    
 }
+
+{{THRIFT_NS}}::TErrorCode::type ServiceModel::removeData(int64_t key){
+    if(this->m_storage){
+        bool ok = this->m_storage->remove(key);
+        if (ok) {
+            return {{THRIFT_NS}}::TErrorCode::EGood;
+        }
+    }
+    return  {{THRIFT_NS}}::TErrorCode::ENotFound;
+}

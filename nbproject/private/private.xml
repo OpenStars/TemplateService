@@ -25,5 +25,11 @@
             <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/inc/ModelData.h</file>
             <file>file:/data/data/src/cpp/hcore2017/services/OpenStarsProfiles/TemplateService/nbproject/Makefile-Release_Full.mk</file>
         </group>
+        <group>
+            <file>file:/home/lehaisonmath6/Desktop/Code/BackendDevelopment/TemplateService/thrift/thriftgen.sh</file>
+            <file>file:/home/lehaisonmath6/Desktop/Code/BackendDevelopment/TemplateService/src/ServerApp.cpp</file>
+            <file>file:/home/lehaisonmath6/Desktop/Code/BackendDevelopment/TemplateService/inc/ServiceHandler.h</file>
+            <file>file:/home/lehaisonmath6/Desktop/Code/BackendDevelopment/TemplateService/inc/ServerApp.h</file>
+        </group>
     </open-files>
 </project-private>
