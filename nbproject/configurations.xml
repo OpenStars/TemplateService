@@ -192,14 +192,23 @@
             <pElem>../../../contribs/ApacheThrift/include</pElem>
             <pElem>../../../contribs/SpecialContribs/include</pElem>
             <pElem>thrift/gen-cpp</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/hashkit</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/libstatgrab</pElem>
-            <pElem>../../../contribs/SpecialContribs/include/kyotocabinet</pElem>
-            <pElem>../../../contribs/SpecialContribs/include/leveldb</pElem>
-            <pElem>../../../contribs/SpecialContribs/src/</pElem>
-            <pElem>../../../corelibs/BaseFoundation/include</pElem>
-            <pElem>../../../corelibs/OpenStorage/inc</pElem>
-            <pElem>../../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>../../contribs/LibEvent/include</pElem>
+            <pElem>../../contribs/Boost/include</pElem>
+            <pElem>../../contribs/Poco/include</pElem>
+            <pElem>../../contribs/ApacheThrift/include</pElem>
+            <pElem>../../contribs/SpecialContribs/include</pElem>
+            <pElem>thrift/gen-cpp</pElem>
+            <pElem>../../contribs/SpecialContribs/src/hashkit</pElem>
+            <pElem>../../contribs/SpecialContribs/src/libstatgrab</pElem>
+            <pElem>../../contribs/SpecialContribs/include/kyotocabinet</pElem>
+            <pElem>../../contribs/SpecialContribs/include/leveldb</pElem>
+            <pElem>../../contribs/SpecialContribs/src</pElem>
+            <pElem>../../corelibs/BaseFoundation/include</pElem>
+            <pElem>../../corelibs/OpenStorage/inc</pElem>
+            <pElem>../../corelibs/BaseFoundation/thrift/gen-cpp</pElem>
+            <pElem>Client</pElem>
+            <pElem>/usr/include/boost</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/openssl</pElem>
             <pElem>Client</pElem>
           </incDir>
           <preprocessorList>

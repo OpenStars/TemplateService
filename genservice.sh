@@ -8,8 +8,8 @@
 	# flag.StringVar(&DATAITEM_THRIFT, "DATAITEM_THRIFT", "TPlatformProfile", "Data item type name")
 	# flag.StringVar(&SERVICE_NAME, "SERVICE_NAME", "PlatformProfileService2", "Project Name")
 
-./genService -SERVICE_BIN=tmarketplace -THRIFT_FILE=tmarketplace -THRIFTCPP_NS="OpenStars::Platform::MarketPlace" -THRIFTCPPDOT_NS="OpenStars.Platform.MarketPlace" \
-        -THRIFT_SERVICE_NAME="TMarketPlaceService" -DATAITEM_THRIFT="TMarketPlaceItem" -SERVICE_NAME=TMarketPlaceService
+./genService -SERVICE_BIN=treportitem -THRIFT_FILE=treportitem -THRIFTCPP_NS="OpenStars::Platform::MarketPlace" -THRIFTCPPDOT_NS="OpenStars.Platform.MarketPlace" \
+        -THRIFT_SERVICE_NAME="TReportItemService" -DATAITEM_THRIFT="TReportItem" -SERVICE_NAME=TReportItemService
 
 ./genService -SERVICE_BIN=gkvservice -THRIFT_FILE=gkv -THRIFTCPP_NS="OpenStars::KV" -THRIFTCPPDOT_NS="OpenStars.KV" \
         -THRIFT_SERVICE_NAME="TSimpleKVService" -DATAITEM_THRIFT="TValueType" -SERVICE_NAME=GKVService
