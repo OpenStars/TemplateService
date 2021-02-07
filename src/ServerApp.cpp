@@ -113,6 +113,10 @@ int ServerApp::main(const std::vector<std::string>& args) {
 
     //flush db
     ServiceFactory::getKVStorage()->flush();
+    ServiceFactory::getStorage()->stopWarmingUp();
+    ServiceFactory::getStorage()->stopSaving();
+    _zkReg.stop();
+    this->_etcdReg.stop();
     return 0;
 }
 

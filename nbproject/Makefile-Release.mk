@@ -58,65 +58,65 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=../../../corelibs/OpenStorage/lib/libopenstorage.a ../../../corelibs/BaseFoundation/lib/libbasefoundation.a ../../../contribs/ApacheThrift/lib/libapachethrift.a ../../../contribs/SpecialContribs/lib/libspecialcontribs.a ../../../contribs/Poco/lib/libpocoall.a ../../../contribs/LibEvent/lib/libevent.a ../../../contribs/SpecialContribs/lib/libetcd-cpp-api.a ../../../contribs/SpecialContribs/lib/libares.a ../../../contribs/SpecialContribs/lib/libboost_atomic.a ../../../contribs/SpecialContribs/lib/libboost_chrono.a ../../../contribs/SpecialContribs/lib/libboost_date_time.a ../../../contribs/SpecialContribs/lib/libboost_locale.a ../../../contribs/SpecialContribs/lib/libboost_regex.a ../../../contribs/SpecialContribs/lib/libboost_system.a ../../../contribs/SpecialContribs/lib/libboost_thread.a ../../../contribs/SpecialContribs/lib/libcpprest.a ../../../contribs/SpecialContribs/lib/libgpr.a ../../../contribs/SpecialContribs/lib/libgrpc++.a ../../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a ../../../contribs/SpecialContribs/lib/libgrpc++_cronet.a ../../../contribs/SpecialContribs/lib/libgrpc++_error_details.a ../../../contribs/SpecialContribs/lib/libgrpc++_reflection.a ../../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a ../../../contribs/SpecialContribs/lib/libgrpc.a ../../../contribs/SpecialContribs/lib/libgrpc_unsecure.a ../../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a ../../../contribs/SpecialContribs/lib/libprotobuf.a `pkg-config --libs zlib` `pkg-config --libs openssl` -ldl  -lpthread -lrt  
+LDLIBSOPTIONS=../../corelibs/OpenStorage/lib/libopenstorage.a ../../corelibs/BaseFoundation/lib/libbasefoundation.a ../../contribs/ApacheThrift/lib/libapachethrift.a ../../contribs/SpecialContribs/lib/libspecialcontribs.a ../../contribs/Poco/lib/libpocoall.a ../../contribs/LibEvent/lib/libevent.a ../../contribs/SpecialContribs/lib/libetcd-cpp-api.a ../../contribs/SpecialContribs/lib/libares.a ../../contribs/SpecialContribs/lib/libboost_atomic.a ../../contribs/SpecialContribs/lib/libboost_chrono.a ../../contribs/SpecialContribs/lib/libboost_date_time.a ../../contribs/SpecialContribs/lib/libboost_locale.a ../../contribs/SpecialContribs/lib/libboost_regex.a ../../contribs/SpecialContribs/lib/libboost_system.a ../../contribs/SpecialContribs/lib/libboost_thread.a ../../contribs/SpecialContribs/lib/libcpprest.a ../../contribs/SpecialContribs/lib/libgpr.a ../../contribs/SpecialContribs/lib/libgrpc++.a ../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a ../../contribs/SpecialContribs/lib/libgrpc++_cronet.a ../../contribs/SpecialContribs/lib/libgrpc++_error_details.a ../../contribs/SpecialContribs/lib/libgrpc++_reflection.a ../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a ../../contribs/SpecialContribs/lib/libgrpc.a ../../contribs/SpecialContribs/lib/libgrpc_unsecure.a ../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a ../../contribs/SpecialContribs/lib/libprotobuf.a `pkg-config --libs zlib` `pkg-config --libs openssl` -ldl  -lpthread -lrt  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk bin/{{SERVICE_BIN}}
 
-bin/{{SERVICE_BIN}}: ../../../corelibs/OpenStorage/lib/libopenstorage.a
+bin/{{SERVICE_BIN}}: ../../corelibs/OpenStorage/lib/libopenstorage.a
 
-bin/{{SERVICE_BIN}}: ../../../corelibs/BaseFoundation/lib/libbasefoundation.a
+bin/{{SERVICE_BIN}}: ../../corelibs/BaseFoundation/lib/libbasefoundation.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/ApacheThrift/lib/libapachethrift.a
+bin/{{SERVICE_BIN}}: ../../contribs/ApacheThrift/lib/libapachethrift.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libspecialcontribs.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libspecialcontribs.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/Poco/lib/libpocoall.a
+bin/{{SERVICE_BIN}}: ../../contribs/Poco/lib/libpocoall.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/LibEvent/lib/libevent.a
+bin/{{SERVICE_BIN}}: ../../contribs/LibEvent/lib/libevent.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libetcd-cpp-api.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libetcd-cpp-api.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libares.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libares.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_atomic.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_atomic.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_chrono.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_chrono.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_date_time.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_date_time.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_locale.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_locale.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_regex.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_regex.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_system.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_system.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libboost_thread.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libboost_thread.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libcpprest.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libcpprest.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgpr.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgpr.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++_core_stats.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++_cronet.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++_cronet.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++_error_details.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++_error_details.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++_reflection.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++_reflection.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc++_unsecure.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpc_unsecure.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpc_unsecure.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libgrpcpp_channelz.a
 
-bin/{{SERVICE_BIN}}: ../../../contribs/SpecialContribs/lib/libprotobuf.a
+bin/{{SERVICE_BIN}}: ../../contribs/SpecialContribs/lib/libprotobuf.a
 
 bin/{{SERVICE_BIN}}: ${OBJECTFILES}
 	${MKDIR} -p bin
@@ -125,37 +125,37 @@ bin/{{SERVICE_BIN}}: ${OBJECTFILES}
 ${OBJECTDIR}/src/ServerApp.o: src/ServerApp.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ServerApp.o src/ServerApp.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ServerApp.o src/ServerApp.cpp
 
 ${OBJECTDIR}/src/ServiceModel.o: src/ServiceModel.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ServiceModel.o src/ServiceModel.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ServiceModel.o src/ServiceModel.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 ${OBJECTDIR}/thrift/gen-cpp/TDataService.o: thrift/gen-cpp/TDataService.cpp
 	${MKDIR} -p ${OBJECTDIR}/thrift/gen-cpp
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/TDataService.o thrift/gen-cpp/TDataService.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/TDataService.o thrift/gen-cpp/TDataService.cpp
 
 ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.o: thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp
 	${MKDIR} -p ${OBJECTDIR}/thrift/gen-cpp
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.o thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.o thrift/gen-cpp/{{THRIFT_FILE_NAME}}_constants.cpp
 
 ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.o: thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp
 	${MKDIR} -p ${OBJECTDIR}/thrift/gen-cpp
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.o thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.o thrift/gen-cpp/{{THRIFT_FILE_NAME}}_types.cpp
 
 ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.o: thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp
 	${MKDIR} -p ${OBJECTDIR}/thrift/gen-cpp
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../../contribs/LibEvent/include -I../../../contribs/Boost/include -I../../../contribs/Poco/include -I../../../contribs/ApacheThrift/include -I../../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../../contribs/SpecialContribs/src/hashkit -I../../../contribs/SpecialContribs/src/libstatgrab -I../../../contribs/SpecialContribs/include/kyotocabinet -I../../../contribs/SpecialContribs/include/leveldb -I../../../contribs/SpecialContribs/src/ -I../../../corelibs/BaseFoundation/include -I../../../corelibs/OpenStorage/inc -I../../../corelibs/BaseFoundation/thrift/gen-cpp -IClient `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.o thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp
+	$(COMPILE.cc) -O2 -DHAVE_CONFIG_H -Iinc -I../../contribs/LibEvent/include -I../../contribs/Boost/include -I../../contribs/Poco/include -I../../contribs/ApacheThrift/include -I../../contribs/SpecialContribs/include -Ithrift/gen-cpp -I../../contribs/SpecialContribs/src/hashkit -I../../contribs/SpecialContribs/src/libstatgrab -I../../contribs/SpecialContribs/include/kyotocabinet -I../../contribs/SpecialContribs/include/leveldb -I../../contribs/SpecialContribs/src -I../../corelibs/BaseFoundation/include -I../../corelibs/OpenStorage/inc -I../../corelibs/BaseFoundation/thrift/gen-cpp -IClient -I/usr/include/boost -I/usr/include/x86_64-linux-gnu/openssl `pkg-config --cflags zlib` `pkg-config --cflags openssl`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.o thrift/gen-cpp/{{THRIFT_SERVICE_NAME}}.cpp
 
 # Subprojects
 .build-subprojects:

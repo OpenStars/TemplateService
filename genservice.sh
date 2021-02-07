@@ -11,6 +11,9 @@
 ./genService -SERVICE_BIN=treportitem -THRIFT_FILE=treportitem -THRIFTCPP_NS="OpenStars::Platform::MarketPlace" -THRIFTCPPDOT_NS="OpenStars.Platform.MarketPlace" \
         -THRIFT_SERVICE_NAME="TReportItemService" -DATAITEM_THRIFT="TReportItem" -SERVICE_NAME=TReportItemService
 
+./genService -SERVICE_BIN=kvstorage -THRIFT_FILE=kvstorage -THRIFTCPP_NS="OpenStars::Platform::KVStorage" -THRIFTCPPDOT_NS="OpenStars.Platform.KVStorage" \
+        -THRIFT_SERVICE_NAME="KVStorageService" -DATAITEM_THRIFT="KVItem" -SERVICE_NAME=KVStorageService
+
 ./genService -SERVICE_BIN=gkvservice -THRIFT_FILE=gkv -THRIFTCPP_NS="OpenStars::KV" -THRIFTCPPDOT_NS="OpenStars.KV" \
         -THRIFT_SERVICE_NAME="TSimpleKVService" -DATAITEM_THRIFT="TValueType" -SERVICE_NAME=GKVService
 

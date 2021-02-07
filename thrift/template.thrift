@@ -32,7 +32,8 @@ struct TDataResult{
 
 struct TListDataResult{
     1: TErrorCode errorCode,
-    2: optional list<{{DATAITEM_TYPE_THRIFT}}> data
+    2: optional list<{{DATAITEM_TYPE_THRIFT}}> data,
+    3: optional list<i64> missingkeys
 }
 
 service TDataServiceR{
@@ -41,9 +42,9 @@ service TDataServiceR{
 
 service TDataService{
     TDataResult getData(1:i64 key), 
-    TErrorCode putData(1:i64 key, 2: {{DATAITEM_TYPE_THRIFT}} data)
-    TListDataResult getListData(1:list<i64> lskeys)
-    TErrorCode removeData(1:i64 key) 
+    TErrorCode putData(1:i64 key, 2: {{DATAITEM_TYPE_THRIFT}} data),
+    TListDataResult getListData(1:list<i64> lskeys),
+    TErrorCode removeData(1:i64 key),
 }
 
 service {{THRIFT_SERVICE_NAME}} extends TDataService{
